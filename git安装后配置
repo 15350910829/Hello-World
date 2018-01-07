@@ -1,0 +1,11 @@
+windows安装后配置
+
+git config --global user.name "名字"
+git config -- user user.email "邮箱"
+
+
+git换仓库
+1、在git的根目录查看所有远程仓库
+  git remote    (git remote xxx 是查看指定的仓库）
+2、换仓库地址
+  git remote set-url orgin  仓库地址
