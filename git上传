@@ -1,0 +1,35 @@
+本地git仓库和github仓库之间是通过ssh加密的，所以，本地仓库和远程仓库连接之前需要配置下：
+执行 ssh-keygen -t rsa -C "邮箱号码"
+执行后会在c盘的根目录下有.ssh目录，找到id_rsa.pub这个文件的内容进行复制
+让后在远程仓库settings下设置ssh and gpg kes 。  title随意
+将本地项目上传到git
+1、建立一个项目文件夹如：project
+然后在这个文件夹内运行git bush
+git  init  初始化仓库，会有.git文件夹出现
+然后把项目文件放到这里
+2.可以查看下仓库状态
+git status
+3.把项目文件添加暂存区
+git add .
+4.提交到仓库
+got commit -m  '注释内容'
+5.把远程仓库和本地仓库进行关联
+git remote add origin   项目地址
+6.新建的远程仓库是空的，所以第一次提交用
+git push -u origin master
+下次用提交可以省略  u 
+
+
+二、git上传本地单独修改的文件
+1.git status  可以查看到哪些文件进行了更改
+2.添加修改过的文件到索引库
+git add -u
+3、此时查看状态
+git status
+4、将修改提交到暂存区
+git commit -m "modify"
+5、从远程获取最新版本并merge到本地,大意就是先更新，在上传
+git  pull
+6、将本地修改推送到远程
+git push
+
