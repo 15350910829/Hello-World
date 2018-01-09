@@ -32,4 +32,10 @@ git commit -m "modify"
 git  pull
 6、将本地修改推送到远程
 git push
-
+  
+  
+三、git上传所有新文件
+git status   
+git add -A  
+git commit -a -m"first commit" 
+git push  
